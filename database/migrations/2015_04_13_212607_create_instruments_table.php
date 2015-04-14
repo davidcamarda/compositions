@@ -15,6 +15,13 @@ class CreateInstrumentsTable extends Migration {
 		Schema::create('instruments', function(Blueprint $table)
 		{
 			$table->increments('id');
+
+            $table->string('name');
+            $table->text('description');
+            $table->integer('vendor_id');
+            $table->integer('instrument_type_id');
+            $table->integer('photo_group_id');
+
 			$table->timestamps();
 		});
 	}

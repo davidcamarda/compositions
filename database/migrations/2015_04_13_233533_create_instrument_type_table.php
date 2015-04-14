@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateLinksTable extends Migration {
+class CreateInstrumentTypeTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,14 +12,12 @@ class CreateLinksTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('links', function(Blueprint $table)
+		Schema::create('instrument_type', function(Blueprint $table)
 		{
 			$table->increments('id');
 
-            $table->string('url');
             $table->string('name');
-            $table->string('description');
-            $table->string('link_category_id');
+            $table->text('details');
 
 			$table->timestamps();
 		});
@@ -32,7 +30,7 @@ class CreateLinksTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('links');
+		Schema::drop('instrument_type');
 	}
 
 }

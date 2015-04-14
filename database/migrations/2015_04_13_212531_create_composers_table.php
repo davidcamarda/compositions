@@ -15,10 +15,12 @@ class CreateComposersTable extends Migration {
 		Schema::create('composers', function(Blueprint $table)
 		{
 			$table->increments('id');
+
             $table->integer('user_id');
             $table->text('description');
             $table->text('bio');
             $table->integer('link_id');
+
 			$table->timestamps();
 		});
 	}
