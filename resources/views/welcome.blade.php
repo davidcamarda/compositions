@@ -31,6 +31,16 @@
 				font-size: 96px;
 				margin-bottom: 40px;
 			}
+            .songs_link {
+                font-size: 29px;
+                margin-bottom: 10px;
+                text-decoration: none;
+            }
+            .songs_link a {
+                font-size: 29px;
+                margin-bottom: 10px;
+                text-decoration: none;
+            }
 
 			.quote {
 				font-size: 24px;
@@ -40,7 +50,8 @@
 	<body>
 		<div class="container">
 			<div class="content">
-				<div class="title">Laravel 5</div>
+				<div class="title">Songs Database</div>
+                <div class="songs_link"><a href="/songs">Songs</a></div>
 				<div class="quote">{{ Inspiring::quote() }}</div>
 			</div>
 		</div>
