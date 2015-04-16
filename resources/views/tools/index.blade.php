@@ -9,9 +9,9 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
                     <div class="panel-heading">TOOLS!</div>
-
-
-
+                    <div class="panel-body">
+                        Tools
+                        </div>
                     </div>
                 </div>
             </div>
@@ -19,3 +19,6 @@
     </div>
      @stop
 @endsection
+@section('javascript')
+    <script></script>
+@stop

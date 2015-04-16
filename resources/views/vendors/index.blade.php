@@ -12,7 +12,7 @@
 
 
                     <div class="panel-body">
-Ya Bro, Vendors
+                        Vendors
                     </div>
                 </div>
             </div>
@@ -20,3 +20,7 @@ Ya Bro, Vendors
     </div>
      @stop
 @endsection
+@section('javascript')
+    <script></script>
+@stop
+

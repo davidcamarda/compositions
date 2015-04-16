@@ -39,6 +39,8 @@
                     <li><a href="{{ url('/composers') }}">Composers</a></li>
                     <li><a href="{{ url('/recordings') }}">Recordings</a></li>
                     <li><a href="{{ url('/genres') }}">Genres</a></li>
+                    <li><a href="{{ url('/instruments') }}">Instruments</a></li>
+                    <li><a href="{{ url('/tools') }}">Tools</a></li>
                     <li><a href="{{ url('/vendors') }}">Vendors</a></li>
 				</ul>
 

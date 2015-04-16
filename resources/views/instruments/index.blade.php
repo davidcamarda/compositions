@@ -11,9 +11,7 @@
 
 
                     <div class="panel-body">
-
-
-                                    <h4>Just some filler crap</h4>
+                        Instruments
                     </div>
                 </div>
             </div>
@@ -21,3 +19,6 @@
     </div>
      @stop
 @endsection
+@section('javascript')
+    <script></script>
+@stop

@@ -8,12 +8,8 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
                     <div class="panel-heading">RECORDINGS</div>
-
-
                     <div class="panel-body">
-
-
-                                    <h4>Just some filler crap</h4>
+                        Recordings
                     </div>
                 </div>
             </div>
@@ -21,3 +17,8 @@
     </div>
      @stop
 @endsection
+@section('javascript')
+    <script></script>
+@stop
+
+

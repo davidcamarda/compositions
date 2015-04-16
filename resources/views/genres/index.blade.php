@@ -9,6 +9,10 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
                     <div class="panel-heading">GENRES</div>
+                    <div class="panel-body">
+
+                        Genres
+
                     @foreach ($genres AS $genre)
                         <div class="row">
                             <div class="col-md-3 ">
@@ -24,6 +28,7 @@
                             </div>
                             <div class="col-md-6 ">
                                 {{$genre->description}}
+                                </div>
                             </div>
                         </div>
                         <hr />
@@ -34,3 +39,7 @@
     </div>
      @stop
 @endsection
+@section('javascript')
+    <script></script>
+@stop
+

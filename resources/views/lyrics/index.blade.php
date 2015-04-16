@@ -12,7 +12,7 @@
 
 
                     <div class="panel-body">
-
+                        Lyrics
                     </div>
                 </div>
             </div>
@@ -20,3 +20,7 @@
     </div>
      @stop
 @endsection
+@section('javascript')
+    <script></script>
+@stop
+
