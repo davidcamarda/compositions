@@ -1,8 +1,7 @@
 @extends('me')
 @section('page_title')
     COMPOSERS
-    @stop
-
+@stop
 @section('content')
     <div class="container">
         <div class="row">

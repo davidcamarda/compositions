@@ -1,10 +1,11 @@
 <html>
 	<head>
-		<title>Laravel</title>
+		<title>Songs</title>
 		
 		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
 		<style>
+
 			body {
 				margin: 0;
 				padding: 0;
@@ -45,6 +46,7 @@
 			.quote {
 				font-size: 24px;
 			}
+
 		</style>
 	</head>
 	<body>

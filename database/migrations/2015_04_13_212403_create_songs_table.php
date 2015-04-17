@@ -17,13 +17,13 @@ class CreateSongsTable extends Migration {
 			$table->increments('id');
 
             $table->string('name');
-            $table->string('working_name');
-            $table->text('description');
-            $table->integer('genre_id');
-            $table->integer('sub_genre_id');
-            $table->integer('composer_id');
-            $table->integer('lyric_id');
-            $table->integer('recording_id');
+            $table->string('working_name')->nullable();
+            $table->text('description')->nullable();
+            $table->integer('genre_id')->nullable();
+            $table->integer('sub_genre_id')->nullable();
+            $table->integer('composer_id')->nullable();
+            $table->integer('lyric_id')->nullable();
+            $table->integer('recording_id')->nullable();
 
 			$table->timestamps();
 		});

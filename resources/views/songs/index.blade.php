@@ -7,7 +7,19 @@ SONGS LIST
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
-                    <div class="panel-heading">SONG LIST</div>
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="pull-left">SONG LIST</div>
+                                <div class="pull-right">
+                                    <a href="songs/create">new</a> |
+                                    <a href="songs/create">search</a>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="panel-body">
                         @foreach ($songs as $song)
 
@@ -17,7 +29,7 @@ SONGS LIST
                             Details: <a href="{{url('/song', $song->id)}}">{{$song->name}}</a>
                             <hr />
                             @endforeach
-                              songs
+                              Songs
                     </div>
                 </div>
             </div>

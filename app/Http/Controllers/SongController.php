@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 use App\Song;
+use App\Lyric;
 use App\Http\Requests;
 // use App\Http\Controllers\Controller;
 use Request;
@@ -14,6 +15,7 @@ class SongController extends Controller {
 	public function index()
 	{
 		$songs = Song::all();
+        $lyrics = Lyric::all();
 
         return view('songs.index')->with('songs',$songs);
 	}
