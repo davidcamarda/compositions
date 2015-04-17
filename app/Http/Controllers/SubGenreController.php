@@ -1,9 +1,10 @@
 <?php namespace App\Http\Controllers;
-use App\Vendor;
+use App\SubGenre;
 use App\Http\Requests;
+use App\Http\Controllers\Controller;
 use Request;
 
-class VendorController extends Controller {
+class SubGenreController extends Controller {
 
     /**
      * Display a listing of the resource.
@@ -12,9 +13,9 @@ class VendorController extends Controller {
      */
     public function index()
     {
-        $vendors = Vendor::all();
+        $subgenres = SubGenre::all();
 
-        return view('vendors.index')->with('vendors',$vendors);
+        return view('subgenres.index')->with('subgenres',$subgenres);
     }
 
     /**
@@ -24,28 +25,23 @@ class VendorController extends Controller {
      */
     public function create()
     {
-        return view('vendors.create');
+        return view('subgenres.create');
     }
-
 
     /**
-     * @param Requests\Request $request
+     * Store a newly created resource in storage.
+     *
+     * @return Response
      */
-    public function store(Requests\Request $request)
-
+    public function store()
     {
-        $this->validate($request, [
+        $input = Request::all();
 
-            'name' => 'required'
+        SubGenre::create( $input );
 
-        ]);
 
-        Vendor::create( $request->all() );
 
     }
-
-
-
 
     /**
      * Display the specified resource.
@@ -55,9 +51,8 @@ class VendorController extends Controller {
      */
     public function show($id)
     {
-        $vendor = Vendor::findOrFail($id);
-        //return view('vendor.show',compact('vendor'));
-        return view('vendors.show')->with('vendor',$vendor);
+        $subgenre = SubGenre::findOrFail($id);
+        return view('subgenres.show')->with('subgenre',$subgenre);
 
     }
 

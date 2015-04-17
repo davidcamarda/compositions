@@ -1,10 +1,15 @@
 <?php namespace App\Http\Controllers;
 use App\Song;
-use App\Lyric;
+//use App\Lyric;
 use App\Http\Requests;
-// use App\Http\Controllers\Controller;
-use Request;
 
+
+
+
+/**
+ * Class SongController
+ * @package App\Http\Controllers
+ */
 class SongController extends Controller {
 
 	/**
@@ -15,10 +20,11 @@ class SongController extends Controller {
 	public function index()
 	{
 		$songs = Song::all();
-        $lyrics = Lyric::all();
+        // $lyrics = Lyric::all();
 
         return view('songs.index')->with('songs',$songs);
 	}
+
 
 	/**
 	 * Show the form for creating a new resource.
@@ -30,16 +36,17 @@ class SongController extends Controller {
 		return view('songs.create');
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
+    /**
+     * @param Requests\CreateSongRequest $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+	public function store(Requests\CreateSongRequest $request)
 	{
-		$input = Request::all();
+		//$input = Request::all();
 
-        Song::create( $input );
+        Song::create( $request->all());
+
+        return redirect('songs');
 
 
 

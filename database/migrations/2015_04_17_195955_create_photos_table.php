@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRecordingsTable extends Migration {
+class CreatePhotosTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,11 +12,9 @@ class CreateRecordingsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('recordings', function(Blueprint $table)
+		Schema::create('photos', function(Blueprint $table)
 		{
 			$table->increments('id');
-            $table->integer('song_id')->unsigned();
-            $table->string('name');
 			$table->timestamps();
 		});
 	}
@@ -28,7 +26,7 @@ class CreateRecordingsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('recordings');
+		Schema::drop('photos');
 	}
 
 }

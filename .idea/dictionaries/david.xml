@@ -2,6 +2,8 @@
   <dictionary name="david">
     <words>
       <w>fillable</w>
+      <w>subgenre</w>
+      <w>subgenres</w>
     </words>
   </dictionary>
 </component>
