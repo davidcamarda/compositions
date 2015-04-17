@@ -17,10 +17,11 @@ class CreateRecordingsTable extends Migration {
 			$table->increments('id');
             $table->integer('song_id')->unsigned();
             $table->string('name');
-			$table->timestamps();
             $table->foreign('song_id')
-                ->refrences('id')
+                ->references('id')
                 ->on('songs');
+
+			$table->timestamps();
 		});
 	}
 

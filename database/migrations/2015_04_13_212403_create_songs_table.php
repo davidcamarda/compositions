@@ -19,11 +19,10 @@ class CreateSongsTable extends Migration {
             $table->string('name');
             $table->string('working_name')->nullable();
             $table->text('description')->nullable();
-            $table->integer('genre_id')->nullable();
-            $table->integer('sub_genre_id')->nullable();
-            $table->integer('composer_id')->nullable();
-            $table->integer('lyric_id')->nullable();
-            $table->integer('recording_id')->nullable();
+            $table->integer('composer_id');
+            $table->foreign('composer_id')
+                ->references('id')
+                ->on('composers');
 
 			$table->timestamps();
 		});

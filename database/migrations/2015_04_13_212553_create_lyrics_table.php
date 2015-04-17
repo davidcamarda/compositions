@@ -20,6 +20,9 @@ class CreateLyricsTable extends Migration {
             $table->integer('version');
             $table->text('lyrics');
             $table->text('notes');
+            $table->foreign('song_id')
+                ->references('id')
+                ->on('songs');
 
 			$table->timestamps();
 		});

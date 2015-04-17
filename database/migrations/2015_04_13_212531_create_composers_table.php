@@ -16,10 +16,13 @@ class CreateComposersTable extends Migration {
 		{
 			$table->increments('id');
 
-            $table->integer('user_id');
+            $table->integer('user_id')->unsigned();
             $table->text('description');
             $table->text('bio');
             $table->integer('link_id');
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users');
 
 			$table->timestamps();
 		});

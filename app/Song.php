@@ -25,9 +25,9 @@ class Song extends Model {
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function lyric () {
+    public function lyrics () {
 
-        return $this->hasOne('App\Lyric');
+        return $this->hasMany('App\Lyric');
 
     }
 
@@ -53,7 +53,7 @@ class Song extends Model {
      */
     public function composer () {
 
-        return $this->hasOne('App\Lyric');
+        return $this->hasOne('App\Composer');
 
     }
 

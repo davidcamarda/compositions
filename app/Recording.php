@@ -10,9 +10,22 @@ class Recording extends Model {
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
+
     public function song () {
 
         return $this->belongsTo('App\Song');
+
+    }
+
+    /**
+     * PHOTO GROUPS FOR THE RECORDING
+     *
+     *@return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+
+    public function photogroups () {
+
+        return $this->hasMany('App\PhotoGroup');
 
     }
 
