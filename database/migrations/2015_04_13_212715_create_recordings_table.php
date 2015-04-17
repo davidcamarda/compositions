@@ -18,6 +18,9 @@ class CreateRecordingsTable extends Migration {
             $table->integer('song_id')->unsigned();
             $table->string('name');
 			$table->timestamps();
+            $table->foreign('song_id')
+                ->refrences('id')
+                ->on('songs');
 		});
 	}
 
